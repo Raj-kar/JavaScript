@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Get doc by ID</title>
+</head>
+
+<body>
+    <p id="para">
+        Click the button for change color
+    </p>
+    <button onclick= "changeColor('blue')">
+        Click me
+    </button>
+    
+    <script>
+      function changeColor(color) {
+        let current_color = document.getElementById("para").style.color;
+        
+        if (current_color == color)
+            document.getElementById("para").style.color = 'red';
+        else
+            document.getElementById("para").style.color = color;
+      }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Functions !</title>
+</head>
+
+<body>
+    <p id="raj">
+        Raj is a bad boy !!
+    </p>
+    <button onclick="changeColor()">
+        click me
+    </button>
+
+    <script>
+        function changeColor() {
+            if(document.getElementById("raj").style.color == "purple")
+                document.getElementById("raj").style.color = "tomato";
+            else
+                document.getElementById("raj").style.color = "purple";
+        }
+    </script>
+
+</body>
+
+</html>

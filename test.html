@@ -1,0 +1,34 @@
+<!-- name and age two text box, button - calculate, 
+if the age of the person >= 18, alert message will show adult, below , no qualified for vote -->
+<html>
+
+<head>
+    <title>Check if eligible</title>
+</head>
+
+<body>
+    <p>Enter your name : </p> 
+    <input type="text" id="name">
+
+    <p>Enter your age : </p> 
+    <input type="text" id="age"> <br><br>   
+
+    <button onclick= showMessage()>
+        Check if eligible
+    </button>
+
+    <script>
+        function showMessage() {
+            let user_age = document.getElementById("age").value;
+            let user_name = document.getElementById("name").value;
+
+            if(user_age >= 18)
+                alert(`${user_name} ! you are an adult !`)
+            else    
+                alert(`${user_name} ! you are below 18, so you are not qualified for vote !`)
+        }
+    </script>
+
+</body>
+
+</html>

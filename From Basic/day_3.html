@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Functions !</title>
+</head>
+
+<body>
+    <!-- sum of two number using function ! -->
+    <script>
+        // No arg no return
+        function add()
+        {
+            var num1, num2;
+            num1 = Number(prompt("Enter a num !"));
+            num2 = Number(prompt("Enter a num !"));
+
+            document.write(`sum = ${num1 + num2} <br>`);
+        }
+        add();
+        // with arg, no return
+        function sub(num1, num2) {
+            document.write(`subtacrt = ${num1 - num2} <br>`);
+        }
+        sub(10, 5);
+        // no arg, with return
+        function mul()
+        {
+            var num1 = 10, num2 = 5;
+            return num1 * num2;
+        }
+        let answer = mul();
+        document.write(`mul = ${answer} <br>`);
+        // with arg, with return
+        function div(num1, num2)
+        {
+            return num1 / num2;
+        }
+        answer = div(10, 2);
+        document.write(`div = ${answer} <br>`);
+
+    </script>
+
+</body>
+
+</html>
