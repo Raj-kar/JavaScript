@@ -1,0 +1,31 @@
+<!-- Write a JavaScript program to input no of days and the output will be number of years, months, day -->
+
+<html>
+
+<head>
+    <title> For and while loop</title>
+</head>
+
+<body>
+    <script typ="text/java-script">
+        var days = prompt("Enter number of Days - ")
+        var year = 0, month = 0;
+
+        while (days >= 365) {
+            year += 1;
+            days = days - 365;
+        }
+        
+        while (days >= 30) {
+            month += 1;
+            days = days - 30;
+        }
+
+        document.write(year + "years" + "<br>")
+        document.write(month + "months" + "<br>")
+        document.write(days + "days" + "<br>")
+
+    </script>
+</body>
+
+</html>

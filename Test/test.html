@@ -1,0 +1,24 @@
+<!-- Write a JavaScript program to input no of days and the output will be number of years, months, day -->
+
+<html>
+
+<head>
+    <title> For and while loop</title>
+</head>
+
+<body>
+    <!-- arr ! -->
+    <script>
+        var n, a, s = 0;
+        n = Number(prompt("Enter a num : "));
+
+        while (n != 0) {
+            a = n % 10;
+            s = (s * 10) + a;
+            n = parseInt(n / 10);
+        }
+        document.write(`Reverse = ${s} `);
+    </script>
+</body>
+
+</html>
