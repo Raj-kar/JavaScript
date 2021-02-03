@@ -1,0 +1,51 @@
+<!-- Get document by ID -->
+<html>
+
+<head>
+    <title> Get document by id </title>
+</head>
+
+<body>
+    <p>Enter your first name </p>
+    <input type="text" id="first">
+
+    <p>Enter your last name </p>
+    <input type="text" id="last">
+
+    <button onclick="main()">
+        Get your final name
+    </button>
+
+    <script>
+        // write a js program to remove non-char 
+        function remove_nonn_char(name) {
+            final_name = ""
+
+            for (let i = 0; i < name.length; i++) {
+                let val = name[i].charCodeAt(0);
+                if ((val >= 65 && val <= 90) || (val >= 97 && val <= 122)){
+                    final_name += name[i];
+                }
+            }
+            return final_name;
+        }
+
+        function main() {
+            let first_name = document.getElementById("first").value
+            let last_name = document.getElementById("last").value;
+
+            var clean_first_name = remove_nonn_char(first_name);
+            var clean_last_name = remove_nonn_char(last_name);
+
+            document.write(clean_first_name + " " + clean_last_name);
+        }
+
+        
+
+      
+
+
+    </script>
+</body>
+
+</html>

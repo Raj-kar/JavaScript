@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Validate Input</h2>
+
+    <p>Enter your name : </p>
+    <input id="name" type="text">
+
+    <p>Enter your mobile number : </p>
+    <input id="mobile_number" type="number"><br><br>
+
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="output"></p>
+    <p id="output1"></p>
+
+    <script>
+        function myFunction() {
+            var name, text1, text2, mobile_num, is_submit = true;
+
+            name = document.getElementById("name").value;
+            console.log(name);
+            console.log(name.length);
+            mobile_num = document.getElementById("mobile_number").value;
+
+            if (name.length < 5) {
+                document.getElementById("output1").innerHTML =  "Name is not valid";
+                is_submit = false;
+            } 
+            if(mobile_num.length < 10) {
+               document.getElementById("output").innerHTML = " Length of the Number should be alteast 10 !";
+                is_submit = false;
+            }
+
+            if(is_submit){
+                document.getElementById("output").innerHTML = "";
+                document.getElementById("output1").innerHTML = "Submit sucessfull !";
+            }
+                
+            
+        }
+    </script>
+
+</body>
+
+</html>

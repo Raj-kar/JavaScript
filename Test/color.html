@@ -1,0 +1,40 @@
+<!-- Get document by ID -->
+<html>
+
+<head>
+    <title> Get document by id </title>
+</head>
+
+<body>
+    <p id="para">Change it !! </p>
+   
+    <button onclick="changeColor()">
+        Change color
+    </button>
+
+    <button onclick="autoChange()">
+        automatic change color
+    </button>
+
+    <script>
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) { 
+                color +=letters[Math.floor(Math.random() * 16)];
+            } 
+            return color; 
+        }
+
+        function changeColor() {
+            document.getElementById("para").style.color = getRandomColor();
+        }
+
+        function autoChange() {
+            setInterval(function() {changeColor()}, 1000);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Color changer</title>
+    </head>
+    <body>
+        <label for="user_color">Please choose a color:</label>
+        <input type="color" id="user_color"><br>
+        <button id="btn" onclick="change_color()">Change color</button>
+
+        <script>
+            function change_color() {
+                user_color = document.getElementById("user_color").value;
+                document.bgColor = user_color;
+                document.getElementById("btn").style.color = user_color;
+            }
+        </script>
+
+    </body>
+</html>

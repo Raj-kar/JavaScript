@@ -1,24 +1,34 @@
-<!-- Write a JavaScript program to input no of days and the output will be number of years, months, day -->
-
+<!-- name and age two text box, button - calculate, 
+if the age of the person >= 18, alert message will show adult, below , no qualified for vote -->
 <html>
 
 <head>
-    <title> For and while loop</title>
+    <title>Check if eligible</title>
 </head>
 
 <body>
-    <!-- arr ! -->
-    <script>
-        var n, a, s = 0;
-        n = Number(prompt("Enter a num : "));
+    <p>Enter your name : </p> 
+    <input type="text" id="name">
 
-        while (n != 0) {
-            a = n % 10;
-            s = (s * 10) + a;
-            n = parseInt(n / 10);
+    <p>Enter your age : </p> 
+    <input type="text" id="age"> <br><br>   
+
+    <button onclick= showMessage()>
+        Check if eligible
+    </button>
+
+    <script>
+        function showMessage() {
+            let user_age = document.getElementById("age").value;
+            let user_name = document.getElementById("name").value;
+
+            if(user_age >= 18)
+                alert(`${user_name} ! you are an adult !`)
+            else    
+                alert(`${user_name} ! you are below 18, so you are not qualified for vote !`)
         }
-        document.write(`Reverse = ${s} `);
     </script>
+
 </body>
 
 </html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <STYLE>
+        h1 {
+            text-align: center;
+        }
+    </STYLE>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Electricity Bill </title>
+</head>
+
+<body style="background-color: royalblue;">
+    <form method="dialog">
+        <h1> <b> Bill Calculator </b></h1>
+        <div>
+            <label for="Category"><b> Enter your Category: </b></label>
+            <select name="Category" id="arc">
+                <option value="Agriculture">Agriculture</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+        </div>
+        <br>
+        <label for="meter"> <b> Enter your meter number: </b></label>
+        <div>
+            <input type="number" name="meter" id="meter" required>
+        </div>
+        <label for="units"> <b> Enter no. of units consumed: </b></label>
+        <div>
+            <input type="number" name="units" id="units" required>
+        </div>
+        <p>
+            <b> Calculate your bill: </b>
+        </p> 
+        <button onclick="calculate_bill()" style="color: firebrick;">
+            Calculate
+        </button>
+    </form>
+    <p id="output"></p>
+    <script src="main.js"></script>
+</body>
+
+</html>
